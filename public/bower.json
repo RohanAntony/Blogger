@@ -1,0 +1,11 @@
+{
+  "name": "public",
+  "authors": [
+    "Rohan Antony <rohan271995@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "semantic": "semantic-ui#^2.2.6"
+  }
+}
