@@ -19,3 +19,40 @@
 4. run `npm install` in application root folder
 5. run `bower install` in public folder
 6. run `npm start` in application root folder
+
+##Design
+- The application
+
+##Server API endpoints
+- `/new GET`
+  - serves HTML page which allows one to create a blog.
+- `/create POST`
+  - adds a new blog to database with data including
+  `{
+    title:Title [set by user],
+    content:Content [set by user],
+    date:[Data of creation and cannot be set by user]
+  }`
+- `/all GET`
+  - serves all the blogs created as a list object which can be rendered
+- `/edit/:id GET`
+  - here id is the mongodb generated id for each document
+  - serves a HTML page with filled data allowing user to modify and update
+- `/update POST`
+  - updated content is sent
+  `{
+    title:Title [reset by user],
+    content:Content [reset by user],
+    date:[Data of creation and cannot be set by user]    
+  }`
+- `/delete/:id GET`
+  - delete a blog post with given unique ID referencing the blog.
+- `/getImage GET`
+  - posts a file in the format of multipart to server
+- `/uplaod POST`
+  - gets the file and saves it
+  - returns the URL of the file
+  `{
+    status:success,
+    data:sampleFilename.extension
+  }`
