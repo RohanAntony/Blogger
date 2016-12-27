@@ -1,4 +1,7 @@
-node_modules
-npm-debug.log
-public/bower_components
-public/uploads
+serverAPI/node_modules
+serverAPI/npm-debug.log
+serverAPI/public/bower_components
+serverAPI/public/uploads
+clientEnd/node_modules
+clientEnd/npm-debug.log
+clientEnd/public/bower_components

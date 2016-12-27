@@ -2,7 +2,7 @@
 
 > *This is an application that was initially developed as a part of the Microsoft Innovation Lab.*
 
-##description
+##Description
 - Uses Semantic CSS library for UI and ExpressJS, NodeJS and MongoDB on server side.
 - Simple blogging application that allows
   - Create new blog
@@ -12,7 +12,7 @@
   - Authentication
   - Comments
 
-##setup
+##Setup
 1. Install NodeJS and MongoDB on system
 2. Also setup npm and bower package management
 3. Download this repository
@@ -21,7 +21,9 @@
 6. run `npm start` in application root folder
 
 ##Design
-- The application
+- The application is written using 2 parts
+  1. Server backend using ExpressJS and NodeJS with npm
+  2. Frontend app using AngularJS and bower
 
 ##Server API endpoints
 - `/new GET`
@@ -49,7 +51,7 @@
   - delete a blog post with given unique ID referencing the blog.
 - `/getImage GET`
   - posts a file in the format of multipart to server
-- `/uplaod POST`
+- `/upload POST`
   - gets the file and saves it
   - returns the URL of the file
   `{
