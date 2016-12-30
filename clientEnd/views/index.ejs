@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/public/bower_components/semantic/dist/semantic.min.css' />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Blogger Application</title>
+
+    <!-- standard static js and css -->
+    <script type="text/javascript" src="/public/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/public/bower_components/semantic/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="/public/bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/public/bower_components/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="/public/bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+
+    <!-- semantic.min.css is heavy, replace with appropriate used components .css files only later in production -->
+    <link rel="stylesheet" href="/public/bower_components/semantic/dist/semantic.min.css" />
+
+    <!-- user defined js -->
+    <script type="text/javascript" src="/public/app.js"></script>
+    <script type="text/javascript" src="/public/components/appHeader/component.js"></script>
+    <script type="text/javascript" src="/public/components/appMenu/component.js"></script>
+    <script type="text/javascript" src="/public/components/appBody/component.js"></script>
+
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <body ng-app="userDashboard">
+    <app-header></app-header>
+    <div class="ui fluid container main-body" style="overflow:hidden;">
+      <div class="ui grid" style="margin-top:60px;margin-left:10px;margin-right:10px;">
+        <app-menu class="three wide column"></app-menu>
+        <app-body  class="thirteen wide column" style="overflow:scroll;height:550px;"></app-body>
+      </div>
+    </div>
+
   </body>
 </html>

@@ -5,3 +5,4 @@ serverAPI/public/uploads
 clientEnd/node_modules
 clientEnd/npm-debug.log
 clientEnd/public/bower_components
+clientEnd/steps
